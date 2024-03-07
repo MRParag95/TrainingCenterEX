@@ -14,4 +14,8 @@ public class Coordinator extends Employee {
     @SequenceGenerator(name = "coordinator_seq", allocationSize = 1)
     @Column(name = "id", nullable = false)
     private Long id;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "director_id")
+    private Director director;
 }

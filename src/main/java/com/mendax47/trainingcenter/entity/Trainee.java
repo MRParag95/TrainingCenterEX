@@ -14,4 +14,8 @@ public class Trainee extends Employee {
     @SequenceGenerator(name = "trainee_seq", allocationSize = 1)
     @Column(name = "id", nullable = false)
     private Long id;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "trainer_id")
+    private Trainer trainer;
 }
