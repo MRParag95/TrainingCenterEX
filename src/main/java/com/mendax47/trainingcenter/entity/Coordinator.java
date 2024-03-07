@@ -11,7 +11,7 @@ import lombok.Setter;
 public class Coordinator extends Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "coordinator_seq")
-    @SequenceGenerator(name = "coordinator_seq")
+    @SequenceGenerator(name = "coordinator_seq", allocationSize = 1)
     @Column(name = "id", nullable = false)
     private Long id;
 }

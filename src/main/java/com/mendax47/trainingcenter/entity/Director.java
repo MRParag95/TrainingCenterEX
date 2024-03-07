@@ -17,7 +17,7 @@ import lombok.experimental.SuperBuilder;
 public class Director extends Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "director_seq")
-    @SequenceGenerator(name = "director_seq")
+    @SequenceGenerator(name = "director_seq", allocationSize = 1)
     @Column(name = "id", nullable = false, updatable = false)
     private Long id;
 }
